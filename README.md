@@ -1,6 +1,8 @@
 # Three.js Portfolio Board
 
-An interactive 3D visualization project that displays a portfolio in a unique pyramid structure using Three.js and CSS3D rendering.
+An evolution of the iconic https://threejs.org/examples/css3d_periodictable.html 3D program into an image portfolio.
+
+An interactive 3D visualization project that displays a portfolio on a 3D surface using Three.js and CSS3D rendering.
 
 ## Features
 
