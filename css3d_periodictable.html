@@ -245,37 +245,60 @@
 
 			@keyframes logoAnimation {
 				0% {
-					transform: translate(-140px, 140px) scale(3);
+					transform: translate(-8vw, 14vh) scale(4);
 					opacity: 0;
 				}
 				50% {
-					transform: translate(-140px, 140px) scale(2.5);
+					transform: translate(-8vw, 14vh) scale(2.5);
 					opacity: 0.5;
 				}
 				75% {
-					transform: translate(-140px, 140px) scale(1.5);
+					transform: translate(-8vw, 14vh) scale(1.5);
 					opacity: 0.8;
 				}
 				90% {
-					transform: translate(-140px, 140px) scale(1.2);
+					transform: translate(-8vw, 14vh) scale(1.2);
 					opacity: 0.9;
 				}
 				100% {
-					transform: translate(-140px, 140px) scale(1);
+					transform: translate(-8vw, 14vh) scale(1);
 					opacity: 1;
 				}
+			}
+
+			#info {
+				position: fixed;
+				top: 0;
+				left: 0;
+				width: 100%;
+				z-index: 1000;
 			}
 
 			#info img {
 				animation: logoAnimation 2s cubic-bezier(0.34, 1.56, 0.64, 1) forwards;
 				position: relative;
 				transform-origin: center center;
+				height: 12vw;
+				max-height: 208px;
+				min-height: 100px;
+			}
+
+			@media screen and (max-width: 768px) {
+				#info img {
+					height: 15vw;
+				}
+			}
+
+			@media screen and (max-width: 480px) {
+				#info img {
+					height: 20vw;
+				}
 			}
 		</style>
 	</head>
 	<body>
 		<div id="info">
-			<img src="kepek/Logo_feher.png" style="height: 208px; vertical-align: middle; margin-right: 10px;">
+			<img src="kepek/Logo_feher.png" style="vertical-align: middle; margin-right: 10px;">
 			
 		</div>
 		<div id="container"></div>
