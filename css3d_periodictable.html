@@ -242,11 +242,40 @@
 			#info-toggle:hover {
 				background-color: rgba(255,0,255,0.2);
 			}
+
+			@keyframes logoAnimation {
+				0% {
+					transform: translate(-140px, 140px) scale(3);
+					opacity: 0;
+				}
+				50% {
+					transform: translate(-140px, 140px) scale(2.5);
+					opacity: 0.5;
+				}
+				75% {
+					transform: translate(-140px, 140px) scale(1.5);
+					opacity: 0.8;
+				}
+				90% {
+					transform: translate(-140px, 140px) scale(1.2);
+					opacity: 0.9;
+				}
+				100% {
+					transform: translate(-140px, 140px) scale(1);
+					opacity: 1;
+				}
+			}
+
+			#info img {
+				animation: logoAnimation 2s cubic-bezier(0.34, 1.56, 0.64, 1) forwards;
+				position: relative;
+				transform-origin: center center;
+			}
 		</style>
 	</head>
 	<body>
 		<div id="info">
-			<img src="kepek/Logo_lila.png" style="height: 208px; vertical-align: middle; margin-right: 10px;">
+			<img src="kepek/Logo_feher.png" style="height: 208px; vertical-align: middle; margin-right: 10px;">
 			
 		</div>
 		<div id="container"></div>
