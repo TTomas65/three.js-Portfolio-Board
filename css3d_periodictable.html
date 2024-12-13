@@ -248,20 +248,24 @@
 					transform: translate(-8vw, 14vh) scale(4);
 					opacity: 0;
 				}
-				50% {
+				15% {
 					transform: translate(-8vw, 14vh) scale(2.5);
 					opacity: 0.5;
 				}
-				75% {
+				25% {
 					transform: translate(-8vw, 14vh) scale(1.5);
 					opacity: 0.8;
 				}
-				90% {
+				30% {
 					transform: translate(-8vw, 14vh) scale(1.2);
 					opacity: 0.9;
 				}
-				100% {
+				35%, 65% {
 					transform: translate(-8vw, 14vh) scale(1);
+					opacity: 1;
+				}
+				100% {
+					transform: translate(-150%, 10px) scale(0.144);
 					opacity: 1;
 				}
 			}
@@ -269,29 +273,30 @@
 			#info {
 				position: fixed;
 				top: 0;
-				left: 0;
-				width: 100%;
+				left: 50%;
+				transform: translateX(-50%);
 				z-index: 1000;
 			}
 
 			#info img {
-				animation: logoAnimation 2s cubic-bezier(0.34, 1.56, 0.64, 1) forwards;
+				animation: logoAnimation 5s cubic-bezier(0.34, 1.56, 0.64, 1) forwards;
 				position: relative;
 				transform-origin: center center;
-				height: 12vw;
-				max-height: 208px;
-				min-height: 100px;
+				height: 208px;
+				min-height: 30px;
 			}
 
 			@media screen and (max-width: 768px) {
 				#info img {
 					height: 15vw;
+					min-height: 30px;
 				}
 			}
 
 			@media screen and (max-width: 480px) {
 				#info img {
 					height: 20vw;
+					min-height: 30px;
 				}
 			}
 		</style>
