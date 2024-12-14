@@ -386,10 +386,10 @@
 			import { CSS3DRenderer, CSS3DObject } from 'three/addons/renderers/CSS3DRenderer.js';
 
 			const table = [
-				'AI', 'Graphic Design', 'abstract sculpture', 1, 1, 'kepek/T_kep01.jpg',
-			    'AI', 'Graphic Design', 'abstract sculpture', 2, 1, 'kepek/T_kep02.jpg',
-				'AI', 'Graphic Design', 'abstract visualisation', 3, 1, 'kepek/T_kep03.jpg',
-				'AI', 'Graphic Design', 'abstract visualisation', 4, 1, 'kepek/T_kep04.jpg',
+				'GI', 'Graphic Design', 'AI graphic', 1, 1, 'kepek/T_kep01.jpg',
+			    'GI', 'Graphic Design', 'AI graphic', 2, 1, 'kepek/T_kep02.jpg',
+				'GI', 'Graphic Design', 'AI graphic', 3, 1, 'kepek/T_kep03.jpg',
+				'GI', 'Graphic Design', 'AI graphic', 4, 1, 'kepek/T_kep04.jpg',
 				'VI', 'Video Design', 'AI animation', 5, 1, 'https://www.youtube.com/embed/2_5h-g4mNXY',
 				'Gl', 'Graphic Design', '11111', 6, 1, 'kepek/T_kep01.jpg',
 				'Gl', 'Graphic Design', '11111', 7, 1, 'kepek/T_kep01.jpg',
@@ -557,11 +557,13 @@
 					modal.style.transition = 'opacity 0.5s';
 
 					const videoContainer = document.createElement('div');
-					videoContainer.style.position = 'relative';
-					videoContainer.style.width = '80%';
+					videoContainer.style.position = 'absolute';
+					videoContainer.style.width = '80vw';
 					videoContainer.style.maxWidth = '960px';
-					videoContainer.style.aspectRatio = '16/9';
-					videoContainer.style.transform = `translate(${rect.left + rect.width/2}px, ${rect.top + rect.height/2}px) scale(0.2)`;
+					videoContainer.style.height = '45vw';
+					videoContainer.style.maxHeight = '540px';
+					videoContainer.style.transform = `translate(${rect.left}px, ${rect.top}px) scale(0.2)`;
+					videoContainer.style.transformOrigin = 'top left';
 					videoContainer.style.transition = 'all 1s ease-in-out';
 
 					const iframe = document.createElement('iframe');
@@ -582,18 +584,34 @@
 					// Modal és videó animálása
 					modal.style.opacity = '1';
 					requestAnimationFrame(() => {
-						videoContainer.style.transform = 'translate(0, 0) scale(1)';
+						videoContainer.style.transform = 'translate(50%, 50%) translate(-50%, -50%) scale(1)';
 					});
 
+					// Bezárás függvény
+					const closeModal = () => {
+						modal.style.opacity = '0';
+						videoContainer.style.transform = `translate(${rect.left}px, ${rect.top}px) scale(0.2)`;
+						setTimeout(() => {
+							document.body.removeChild(modal);
+						}, 500);
+					};
+
+					// Click esemény kezelése
 					modal.addEventListener('click', function(e) {
 						if (e.target === modal) {
-							modal.style.opacity = '0';
-							videoContainer.style.transform = `translate(${rect.left + rect.width/2}px, ${rect.top + rect.height/2}px) scale(0.2)`;
-							setTimeout(() => {
-								document.body.removeChild(modal);
-							}, 500);
+							closeModal();
 						}
 					});
+
+					// ESC billentyű kezelése
+					const handleKeyDown = (e) => {
+						if (e.key === 'Escape') {
+							closeModal();
+							document.removeEventListener('keydown', handleKeyDown);
+						}
+					};
+					document.addEventListener('keydown', handleKeyDown);
+
 					return;
 				}
 
@@ -602,8 +620,8 @@
 				const startProps = {
 					width: rect.width,
 					height: rect.height,
-					top: rect.top,
-					left: rect.left,
+					top: rect.top + rect.height/2,
+					left: rect.left + rect.width/2,
 					opacity: 0,
 					rotation: 0
 				};
