@@ -393,7 +393,7 @@
 				'VI', 'Video Design', 'AI animation', 5, 1, 'https://www.youtube.com/embed/2_5h-g4mNXY',
 				'Gl', 'Graphic Design', '11111', 6, 1, 'kepek/T_kep01.jpg',
 				'Gl', 'Graphic Design', '11111', 7, 1, 'kepek/T_kep01.jpg',
-				'Gl', 'Graphic Design', '11111', 8, 1, 'kepek/T_kep01.jpg',
+				'MI', 'Graphic Design', '11111', 8, 1, 'https://www.youtube.com/embed/amy1EbMjX6M',
 				'Gl', 'Graphic Design', '11111', 9, 1, 'kepek/T_kep01.jpg',
 				'Gl', 'Graphic Design', '11111', 10, 1, 'kepek/T_kep01.jpg',
 				'Gl', 'Graphic Design', '11111', 11, 1, 'kepek/T_kep01.jpg',
@@ -541,7 +541,7 @@
 				const elementType = clickedElement.querySelector('.symbol').textContent;
 
 				// Ha VI típusú elem, akkor YouTube videót jelenítünk meg
-				if (elementType === 'VI') {
+				if (elementType === 'VI' || elementType === 'MI') {
 					const modal = document.createElement('div');
 					modal.style.position = 'fixed';
 					modal.style.width = '100%';
