@@ -457,7 +457,6 @@
 				'', '', '', 2, 6, null,
 				'', '', '', 3, 6, null,
 				'', '', '', 4, 6, null,
-				'', '', '', 5, 9, null,
 				'', '', '', 6, 9, null,
 				'', '', '', 7, 9, null,
 				'', '', '', 8, 9, null,
@@ -488,7 +487,7 @@
 				'', '', '', 18, 6, null,
 				'', '', '', 1, 7, null,
 				'', '', '', 2, 7, null,
-				'', '', '', 4, 10, null,
+			
 				'', '', '', 5, 10, null,
 				'', '', '', 6, 10, null,
 				'', '', '', 7, 10, null,
@@ -927,12 +926,12 @@
 					console.log('Creating base, starting from element:', elementIndex);
 					pyramidLookAt.set(0, -1, 0);
 					var step = (itemW * 10) / 5;
-					for (let i = 0; i < 25 && elementIndex < objects.length; i++) {
+					for (let i = 0; i < 30 && elementIndex < objects.length; i++) {
 						let object = new THREE.Object3D();
 						let x0 = -itemW * 5;
 						let z0 = -itemW * 5;
-						let row = Math.floor(i / 5);
-						let col = i - (row * 5);
+						let row = Math.floor(i / 6);
+						let col = i - (row * 6);
 						
 						let posX = x0 + col * step;
 						let posY = -itemH * 2.2;  // Közelebb hoztam az alapot
