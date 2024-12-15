@@ -590,10 +590,11 @@
 					// Bezárás függvény
 					const closeModal = () => {
 						modal.style.opacity = '0';
-						videoContainer.style.transform = `translate(${rect.left}px, ${rect.top}px) scale(0.2)`;
+                        videoContainer.style.transition = 'all 1s cubic-bezier(0.4, 0, 1, 1)';
+						videoContainer.style.transform = `translate(50%, 50%) translate(-50%, calc(100vh + 100%)) rotate(5deg) scale(0.01)`;
 						setTimeout(() => {
 							document.body.removeChild(modal);
-						}, 500);
+						}, 1000);
 					};
 
 					// Click esemény kezelése
