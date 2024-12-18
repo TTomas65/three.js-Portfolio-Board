@@ -1,7 +1,6 @@
 # Three.js Portfolio Board
 
 An evolution of the iconic https://threejs.org/examples/css3d_periodictable.html 3D program into an image and videoportfolio.
-
 An interactive 3D visualization project that displays a portfolio on a 3D surface using Three.js and CSS3D rendering.
 
 ## Features
@@ -13,7 +12,7 @@ An interactive 3D visualization project that displays a portfolio on a 3D surfac
 - **Interactive Controls**: 
   - Trackball controls for 3D navigation
   - Button controls for different view states (Pyramid, Grid, Table)
-- **Image Gallery**: Interactive image display with modal view
+- **NEWImage Gallery**: Interactive image and videodisplay with modal view
 - **Responsive Design**: Adapts to different screen sizes
 
 ## Technology Stack
