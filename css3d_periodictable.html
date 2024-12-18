@@ -394,21 +394,21 @@
 				'GI', 'Graphic Design', 'AI graphic', 6, 1, 'kepek/T_kep05.jpg',
 				'GI', 'Graphic Design', 'AI graphic', 7, 1, 'kepek/T_kep06.jpg',
 				'MI', 'Music Video', 'AI music', 8, 1, 'https://www.youtube.com/embed/amy1EbMjX6M',
-				'GI', 'Graphic Design', '11111', 9, 1, 'kepek/T_kep01.jpg',
-				'GI', 'Graphic Design', '11111', 10, 1, 'kepek/T_kep07.jpg',
-				'GI', 'Graphic Design', '11111', 11, 1, 'kepek/T_kep08.jpg',
-				'GI', 'Graphic Design', '11111', 12, 1, 'kepek/T_kep09.jpg',
-				'GI', 'Graphic Design', '11111', 13, 1, 'kepek/T_kep010.jpg',
-				'GI', 'Graphic Design', '11111', 14, 1, 'kepek/T_kep011.jpg',
-				'', '', '', 1, 2, null,
-				'', '', '', 2, 2, null,
+				'GI', 'Graphic Design', 'AI graphic', 9, 1, 'kepek/T_kep12.jpg',
+				'GI', 'Graphic Design', 'AI graphic', 10, 1, 'kepek/T_kep07.jpg',
+				'GI', 'Graphic Design', 'AI graphic', 11, 1, 'kepek/T_kep08.jpg',
+				'VI', 'Video Design', 'AI animation', 12, 1, 'https://www.youtube.com/embed/j7WhPCAI0Uk',
+				'GI', 'Graphic Design', 'AI graphic', 13, 1, 'kepek/T_kep10.jpg',
+				'GI', 'Graphic Design', 'AI graphic', 14, 1, 'kepek/T_kep11.jpg',
+				'GI', 'Graphic Design', 'AI graphic', 1, 2, 'kepek/T_kep09.jpg',
+				'MO', 'Music Video', 'My own music', 2, 2, 'https://www.youtube.com/embed/5mZUmYr1uMg',
 				'', '', '', 13, 2, null,
 				'', '', '', 14, 2, null,
 				'', '', '', 15, 2, null,
 				'', '', '', 16, 2, null,
 				'', '', '', 17, 2, null,
 				'', '', '', 18, 2, null,
-				'', '', '', 1, 3, null,
+				'MO', 'Music Video', 'My own music', 1, 3, 'https://www.youtube.com/embed/egY1BHE4wjY',
 				'', '', '', 2, 3, null,
 				'', '', '', 13, 3, null,
 				'', '', '', 14, 3, null,
@@ -541,7 +541,7 @@
 				const elementType = clickedElement.querySelector('.symbol').textContent;
 
 				// Ha VI típusú elem, akkor YouTube videót jelenítünk meg
-				if (elementType === 'VI' || elementType === 'MI') {
+				if (elementType === 'VI' || elementType === 'MI' || elementType === 'MO') {
 					const modal = document.createElement('div');
 					modal.style.position = 'fixed';
 					modal.style.width = '100%';
