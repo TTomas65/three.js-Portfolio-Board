@@ -13,7 +13,7 @@ An interactive 3D visualization project that displays a portfolio on a 3D surfac
 - **Interactive Controls**: 
   - Trackball controls for 3D navigation
   - Button controls for different view states (Pyramid, Grid, Table)
-- **Image Gallery**: Interactive image display with modal view
+- **NEWImage Gallery**: Interactive image and videodisplay with modal view
 - **Responsive Design**: Adapts to different screen sizes
 
 ## Technology Stack
